@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proposed Her</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+    body { width: 100%; min-height: 100vh; display: flex; justify-content: center; align-items: center; background-color: #d9a6a6; text-align: center; }
+    .container { display: flex; flex-direction: column; align-items: center; gap: 20px; max-width: 500px; margin: 20px; }
+    .tenor-gif-embed { max-width: 200px; }
+    .btn { display: flex; gap: 25px; margin-top: 20px; }
+    .btn a, .btn button { text-decoration: none; color: #111; background: #fff; padding: 10px 25px; border-radius: 66px; box-shadow: 0.5rem 1rem 3rem rgba(0,0,0,0.3); border: none; font-size: 16px; cursor: pointer; }
+    #move-random { position: relative; z-index: 10; }
+    img { max-width: 300px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+  </style>
+</head>
+<body>
+  <div id="content" class="container">
+    <div class="tenor-gif-embed" data-postid="22885016" data-width="100%"></div>
+    <h1>Shamuuuuu, Do u luv me? 🥺</h1>
+    <p>I'm all urs 😁😘</p>
+    <div class="btn">
+      <button onclick="showPage('yes')">Jii Vansh Daddy</button>
+      <button onclick="showPage('no1')">Hatt nikal</button>
+    </div>
+  </div>
+
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+  <script>
+    const content = document.getElementById('content');
+
+    function showPage(page) {
+      if (page === 'yes') {
+        content.innerHTML = `
+          <img src="1771005156379.png" alt="Price">
+          <h1>Hehehe tysmm ji, ye lo apka pricee 😁🫶🏻👍🏻, btw I LUVV UU SOO MUCHH 💋💖😘</h1>
+        `;
+      } else if (page === 'no1') {
+        content.innerHTML = `
+          <div class="tenor-gif-embed" data-postid="22050818" data-width="100%"></div>
+          <h1>Esa naa!! Dikhadi na Dosto 🥺😭</h1>
+          <p>Plss haa boldoo 😭😭🙏🏻</p>
+          <div class="btn">
+            <button onclick="showPage('yes')">Yes</button>
+            <button onclick="showPage('no2')">No</button>
+          </div>
+        `;
+      } else if (page === 'no2') {
+        content.innerHTML = `
+          <div class="tenor-gif-embed" data-postid="15195810" data-width="100%"></div>
+          <h1>Ek aur baar Soch lo! 😣</h1>
+          <p>kyu aisa kar rahi ho Plzzz Man jao😣</p>
+          <div class="btn">
+            <button onclick="showPage('yes')">Are mazak kar rhi thi ilu yrr 😁</button>
+            <button onclick="showPage('no3')">No (matt dabau 😭🙏🏻)</button>
+          </div>
+        `;
+      } else if (page === 'no3') {
+        content.innerHTML = `
+          <img src="Crying.jpg" alt="Rula Diya" style="max-width: 250px;">
+          <h1>Lo rula diya na 😢🥺</h1>
+          <p>Me baccha bann jauga, bss yess krdo 😝😁</p>
+          <div class="btn">
+            <button onclick="showPage('yes')">Yes</button>
+            <button id="move-random" onmouseenter="moveEl(this)" ontouchstart="moveEl(this)">No (pkdkar bata 😝😁)</button>
+          </div>
+        `;
+      }
+      
+      const script = document.createElement('script');
+      script.src = "https://tenor.com/embed.js";
+      document.body.appendChild(script);
+    }
+
+    function moveEl(elm) {
+      elm.style.position = "absolute";
+      elm.style.top = Math.floor(Math.random() * 80 + 10) + "%";
+      elm.style.left = Math.floor(Math.random() * 80 + 10) + "%";
+    }
+  </script>
+</body>
+</html>
